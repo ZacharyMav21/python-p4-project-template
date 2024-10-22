@@ -1,4 +1,4 @@
-// src/components/ReviewForm.js
+
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -14,7 +14,7 @@ const ReviewForm = ({ animeId }) => {
       rating: Yup.number().min(1).max(5).required('Rating is required.'),
     }),
     onSubmit: (values) => {
-      fetch(`http://localhost:5000/review`, {
+      fetch(`http://localhost:3000/review`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
